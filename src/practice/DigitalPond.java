@@ -2,6 +2,7 @@ package practice;
 
 public class DigitalPond {
 	
+	private int result = 0;
 	private int[][] pond = {{0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 			{0, 0, 0, 0, 1, 0, 0, 0, 0, 0}, 
 			{0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
@@ -22,12 +23,16 @@ public class DigitalPond {
 		for (int i = 0; i < digitalPond.pond.length; i++) {
 			for (int j = 0; j < digitalPond.pond.length; j++) {
 				System.out.print(digitalPond.pond[i][j] + " ");
+				digitalPond.result += digitalPond.pond[i][j];
 			}
 			System.out.println();
 		}
+		
+		System.out.println("result: " + digitalPond.result);
 	}
 	
 	public void iteration(DigitalPond digitalPond) {
+		
 		for (int i = 0; i < digitalPond.pond.length; i++) {
 			for (int j = 0; j < digitalPond.pond.length; j++) {
 				
